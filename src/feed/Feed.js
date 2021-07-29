@@ -6,9 +6,9 @@ import UploadImage from '../uploadImage/UploadImage.js'
 import Post from '../post/Post.js'
 import Logout from '../logout/Logout.js'
 import Suggestions from '../suggestions/Suggestions.js'
+import './Feed.css'
 
-
-const GET_FOLLOWING_POST_URL = 'http://localhost:10005/post-service/get-following-posts'
+const GET_FOLLOWING_POST_URL = `${process.env.REACT_APP_POST_SERVICE_URL}/post-service/get-following-posts`
 
 export default function Feed() {
     const [posts, setPosts] = useState();
@@ -27,12 +27,11 @@ export default function Feed() {
     }, []) 
 
     return (
-    <React.Fragment>
+    <div>
       <Search />
       <Logout />
-      <UploadImage />
-      <div> Feed </div>
-      <div>{posts ? posts.map((post, index) => <Post key={index} name={post.Name} owner={post.Owner} path={post.Path} createdOn={post.CreatedOn} />) : "Loading..."}</div>
+      <UploadImage className="upload-image"/>
+      <div className="posts">{posts ? posts.map((post, index) => <Post key={index} name={post.Name} owner={post.Owner} path={post.Path} createdOn={post.CreatedOn} />) : "Loading..."}</div>
       <Suggestions />     
-      </React.Fragment>)
+    </div>)
 }

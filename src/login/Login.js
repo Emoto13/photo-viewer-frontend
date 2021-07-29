@@ -4,7 +4,7 @@ import axios from 'axios'
 
 import './Login.css'
 
-const LOGIN_URL = 'http://localhost:10000/auth-service/login'
+const LOGIN_URL = `${process.env.REACT_APP_AUTH_SERVICE_URL}/auth-service/login`
 
 const Field = React.forwardRef(({label, type}, ref) => {
     return (
@@ -20,10 +20,12 @@ function setToken(token) {
 } 
 
 export default function Login() {
+  console.log(process.env)
     const usernameRef = useRef()
     const passwordRef = useRef()
 
     const handleSubmit = (event) => {
+        console.log("CLICKED")
         event.preventDefault()
         const data = {
             username: usernameRef.current.value,

@@ -1,0 +1,14 @@
+.posts {
+    position: absolute;
+    top: 500px;
+    left: 60px;
+    width: 1500px;
+}
+
+.upload-image {
+    position: absolute;
+    top: 70px;
+    right: 200px;
+    border: 1px solid #000;
+    width: 30%;
+}

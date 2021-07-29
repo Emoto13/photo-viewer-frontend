@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
-const SIGNUP_URL = 'http://localhost:10003/user-service/create-user'
+const SIGNUP_URL = `${process.env.REACT_APP_USER_SERVICE_URL}/user-service/create-user`
 
 const Field = React.forwardRef(({label, type}, ref) => {
     return (

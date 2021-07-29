@@ -1,0 +1,16 @@
+.search {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+
+.textfield {
+    width: 368px;
+    position: absolute;
+}
+
+table {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    width: 367px;
+}

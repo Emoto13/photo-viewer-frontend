@@ -4,7 +4,7 @@ import axios from 'axios'
 
 import './Suggestions.css';
 
-const GET_SUGGESTIONS_URL = 'http://localhost:10001/follow-service/get-suggestions'
+const GET_SUGGESTIONS_URL = `${process.env.REACT_APP_FOLLOW_SERVICE_URL}/follow-service/get-suggestions`
  
 export default function Suggestions() {
     const [suggestions, setSuggestions] = useState([])
@@ -17,6 +17,9 @@ export default function Suggestions() {
         }
         getSuggestions()
       }, [])
+    if (suggestions.length === 0) {
+        return <div></div>
+    }
 
     return (
         <div className="suggestions-wrapper">

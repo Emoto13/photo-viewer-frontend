@@ -1,0 +1,25 @@
+.name {
+    text-align: left;
+    white-space: nowrap;
+}
+
+.owner {
+    text-align: left;
+    white-space: nowrap;
+}
+
+.image-result {
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+}
+
+.search-result-div {
+    width: 200px;
+}
+
+td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}

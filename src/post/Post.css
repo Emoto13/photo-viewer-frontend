@@ -1,3 +1,38 @@
 .image {
-    width: 50%
+    flex-shrink: 0;
+    width: 100%;
+    padding: 10px 0 0 0;
+}
+
+.post {
+    width: 50%;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+}
+
+.user-photo {
+    border-radius: 50%;
+    width: 7%;
+    float: left;
+}
+
+.username {
+    margin: auto;
+    display: inline-block;
+    padding: 12px 0 12px 25px;
+}
+
+.post-user-info {
+    width: 100%;
+    padding: 10px 0 10px 10px;
+}
+
+.date {
+    display: inline;
+}
+
+.download-btn {
+    margin: auto;
+    padding: 25px 25px 0 0;
+    float: right;
 }

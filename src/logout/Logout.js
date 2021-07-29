@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import './Logout.css'
 
-const LOGOUT_URL = 'http://localhost:10000/auth-service/logout'
+const LOGOUT_URL = `${process.env.REACT_APP_AUTH_SERVICE_URL}/auth-service/logout`
 
 function removeToken() {
   localStorage.removeItem('token');
@@ -26,6 +26,6 @@ export default function Logout() {
 
     return (
     <div>
-        <button onClick={handleLogout}>Log out</button>
+        <button className="logout-button" onClick={handleLogout}>Log out</button>
     </div>)
 }

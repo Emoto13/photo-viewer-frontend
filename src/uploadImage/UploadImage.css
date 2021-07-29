@@ -1,0 +1,27 @@
+.image-upload-icon {
+    cursor: pointer;
+}
+
+.upload-form {
+    position: relative;
+    left: 20px;
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.temp-div {
+    width: 40%;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+}
+
+.temp-image {
+    display: inline;
+    width: 100%;
+}
+
+.upload-button {
+    width: 40%;
+    margin-top: 20px;
+}

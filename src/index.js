@@ -4,6 +4,12 @@ import './index.css';
 import Root from './Root';
 import reportWebVitals from './reportWebVitals';
 
+var dotenv = require('dotenv')
+var dotenvExpand = require('dotenv-expand')
+
+var myEnv = dotenv.config()
+dotenvExpand(myEnv)
+
 ReactDOM.render(
   <React.StrictMode>
     <Root />

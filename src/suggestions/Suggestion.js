@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import './Suggestion.css'
 
-const FOLLOW_USER_URL = 'http://localhost:10001/follow-service/follow'
-const UNFOLLOW_USER_URL = 'http://localhost:10001/follow-service/unfollow'
+const FOLLOW_USER_URL = `${process.env.REACT_APP_FOLLOW_SERVICE_URL}/follow-service/follow`
+const UNFOLLOW_USER_URL = `${process.env.REACT_APP_FOLLOW_SERVICE_URL}/follow-service/unfollow`
 
 function executeAction(isFollowing, userToExecuteActionOn) {
     const mapper = {

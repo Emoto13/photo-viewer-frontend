@@ -8,9 +8,9 @@ const LOGIN_URL = `${process.env.REACT_APP_AUTH_SERVICE_URL}/auth-service/login`
 
 const Field = React.forwardRef(({label, type}, ref) => {
     return (
-      <div>
+      <div className="input-box">
         <label>{label}</label>
-        <input ref={ref} type={type} />
+        <input className="inputs" ref={ref} type={type} />
       </div>
     )
 })
@@ -46,15 +46,17 @@ export default function Login() {
   
 
     return (
-    <div>
-            <form onSubmit={handleSubmit} >
-              <div>Log in</div>
+    <div className="login-box">
+            <form className="form-container" onSubmit={handleSubmit} >
+              <h3 className="title">Log in</h3>
                 <Field ref={usernameRef} label="Username:" type="text" />
                 <Field ref={passwordRef} label="Password:" type="password" />
                 <div>
-                  <button type="submit">Submit</button>
+                  <button className="btn"type="submit">Submit</button>
                 </div>
+                <div className="sign-up">
                 <Link to='/sign-up'>Sign up</Link> 
+                </div>
             </form>
     </div>)
 }

@@ -65,6 +65,7 @@
 }
 
 .trigger-btn {
+    cursor: pointer;
     height: 27px;
     width: 100px;
 }

@@ -1,8 +1,10 @@
 .posts {
     position: absolute;
-    top: 500px;
-    left: 60px;
+    top: 150px;
+    left: 25%;
+    margin: 20px;
     width: 1500px;
+    z-index: 1;
 }
 
 .upload-image {
@@ -11,4 +13,10 @@
     right: 200px;
     border: 1px solid #000;
     width: 30%;
+}
+
+.upload-image-pop-up {
+    position: absolute;
+    top: 30px;
+    right: 250px;
 }

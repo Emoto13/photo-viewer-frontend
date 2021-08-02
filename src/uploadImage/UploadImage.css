@@ -1,5 +1,6 @@
 .image-upload-icon {
     cursor: pointer;
+    padding: 10px;
 }
 
 .upload-form {
@@ -17,11 +18,53 @@
 }
 
 .temp-image {
-    display: inline;
-    width: 100%;
+    width: 95%;
+    position: absolute;
+    top: 2.3em;
+    left: 5%;
+    max-width: 400px;
+}
+
+@media screen and (max-device-width: 530px)  {
 }
 
 .upload-button {
     width: 40%;
     margin-top: 20px;
+    position: relative;
+    top: 1em;
+    left: 1%;
+    font-size: 1.4em;
+    border-radius: 10px;
+}
+
+.label {
+    font-size: 1.3em;
+}
+
+.upload-input {
+    font-size: 1.3em;
+    position: relative;
+    top: -0.6em;
+    left: 1.5%;
+}
+
+.image-name-input {
+    position: relative;
+    left: 32%;
+    top: -80%;
+    font-size: 1.3em;
+    padding: 3px;
+    border-radius: 7px;
+    width: 65%;
+}
+
+.name-container {
+    display: grid;
+    padding: 10px;
+}
+
+.trigger-btn {
+    height: 27px;
+    width: 100px;
 }

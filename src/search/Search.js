@@ -41,7 +41,7 @@ export default function Search() {
               ),
             }}
           />
-         <div>{posts && query ? <table><tbody>{posts.map((post, index) => <SearchResult key={index} name={post.Name} path={post.Path} owner={post.Owner} /> )}</tbody></table> : ""}</div>
+         <div>{posts && query ? <table><tbody>{posts.map((post, index) => <SearchResult key={index} name={post.Name} path={post.Path} owner={post.Username} /> )}</tbody></table> : ""}</div>
         </div>
 
     )

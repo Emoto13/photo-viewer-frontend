@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import Search from '../search/Search.js'
-import UploadImage from '../uploadImage/UploadImage.js'
+import UploadImagePopUp from '../uploadImage/UploadImagePopUp.js'
 import Post from '../post/Post.js'
 import Logout from '../logout/Logout.js'
 import Suggestions from '../suggestions/Suggestions.js'
@@ -30,8 +30,8 @@ export default function Feed() {
     <div>
       <Search />
       <Logout />
-      <UploadImage className="upload-image"/>
       <div className="posts">{feed ? feed.map((post, index) => <Post key={index} name={post.Name} owner={post.Username} path={post.Path} createdOn={post.CreatedOn} />) : "Loading..."}</div>
-      <Suggestions />     
+      <Suggestions /> 
+      <UploadImagePopUp className="upload-image-pop-up" />   
     </div>)
 }

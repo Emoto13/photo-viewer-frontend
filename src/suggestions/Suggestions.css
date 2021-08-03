@@ -14,7 +14,7 @@
     left: 65%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     .suggestions-wrapper {
         display: none;
     }

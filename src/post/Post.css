@@ -1,10 +1,11 @@
 .image {
-    flex-shrink: 0;
+    min-width: 300px;
     width: 100%;
     padding: 10px 0 0 0;
 }
 
 .post {
+    min-width: 400px;
     width: 50%;
     margin-bottom: 20px;
     border: 1px solid gray;

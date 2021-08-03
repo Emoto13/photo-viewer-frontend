@@ -26,7 +26,7 @@ export default function Feed() {
     }, []) 
 
     return (
-    <div>
+    <div className="feed-app">
       <Search />
       <Logout />
       <div className="posts">{feed ? feed.map((post, index) => <Post key={index} name={post.Name} owner={post.Username} path={post.Path} createdOn={post.CreatedOn} />) : "Loading..."}</div>

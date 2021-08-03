@@ -1,10 +1,31 @@
 .posts {
+    min-width: 400px;
     position: absolute;
     top: 10%;
-    left: 8%;
+    left: 5%;
     margin: 20px;
-    width: 1500px;
+    width: 70%;
     z-index: 1;
+}
+
+@media screen and (max-device-width: 530px)  {
+    .posts {
+        margin: auto;
+        position: absolute;
+        top: 10%;
+        left: 2%;
+        right: 2%;
+    }
+}
+
+@media screen and (max-device-width: 1300px)  {
+    .posts {
+        width: 150%;
+        margin: auto;
+        position: absolute;
+        top: 10%;
+        left: 15%;
+    }
 }
 
 .upload-image {

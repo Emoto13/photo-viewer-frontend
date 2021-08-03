@@ -2,6 +2,8 @@ import React, { useRef, useState } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
+import './Signup.css'
+
 const SIGNUP_URL = `${process.env.REACT_APP_USER_SERVICE_URL}/user-service/create-user`
 
 const Field = React.forwardRef(({label, type}, ref) => {

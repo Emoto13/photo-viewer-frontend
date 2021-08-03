@@ -52,7 +52,7 @@ export default function Login() {
               <h3 className="title">Log in</h3>
                 <Field ref={usernameRef} label="Username:" type="text" />
                 <Field ref={passwordRef} label="Password:" type="password" />
-                <div>
+                <div className="btn-wrapper">
                   <button className="btn" type="submit">Submit</button>
                 </div>
                 <div className="sign-up">

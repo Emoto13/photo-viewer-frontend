@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
@@ -16,7 +16,9 @@ const Field = React.forwardRef(({label, type}, ref) => {
 export default function Signup() {
     const usernameRef = useRef()
     const passwordRef = useRef()
-    const emailRef = useRef();
+    const emailRef = useRef()
+    const [status, setStatus] = useState(true)
+    const [message, setMessage] = useState()
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -29,10 +31,12 @@ export default function Signup() {
         const createUser = async () => {
           await axios.post(SIGNUP_URL, data)
           .then(response => {
-            console.log(response.data)
-            window.location.reload()
+            setStatus(true)
           })
-          .catch(error => console.log(error))
+          .catch(error => {
+            setStatus(false)
+            setMessage(error.response.data.error)
+          })
         }
         createUser()
     }
@@ -48,6 +52,9 @@ export default function Signup() {
                 <Field ref={emailRef} label="Email:" type="text" />
                 <div>
                   <button type="submit">Submit</button>
+                </div>
+                <div>
+                  { status && message ? "Registration completed please login" : message} 
                 </div>
                 <Link to='/login'>Log in</Link> 
             </form>

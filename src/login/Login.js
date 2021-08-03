@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
@@ -20,12 +20,11 @@ function setToken(token) {
 } 
 
 export default function Login() {
-  console.log(process.env)
     const usernameRef = useRef()
     const passwordRef = useRef()
+    const [error, setError] = useState()
 
     const handleSubmit = (event) => {
-        console.log("CLICKED")
         event.preventDefault()
         const data = {
             username: usernameRef.current.value,
@@ -38,7 +37,9 @@ export default function Login() {
             setToken(response.data.token)
             window.location.reload()
           })
-          .catch(error => console.log(error))
+          .catch(error => {
+            setError(error.response.data.error)
+          })
         }
         getToken()
     }
@@ -57,6 +58,10 @@ export default function Login() {
                 <div className="sign-up">
                 <Link to='/sign-up'>Sign up</Link> 
                 </div>
+                <div>
+                  {error}
+                </div>
             </form>
+            
     </div>)
 }

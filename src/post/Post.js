@@ -3,7 +3,6 @@ import DownloadImage from '../downloadImage/DownloadImage'
 import './Post.css'
 
 export default function Post({name, path, owner, createdOn}) {
-    console.log(name, path, owner, createdOn)
     return (
         <div className="post">
             <DownloadImage className="download-btn" imageUrl={path} />

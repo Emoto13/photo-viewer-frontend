@@ -12,7 +12,6 @@ const GET_FOLLOWING_POST_URL = `${process.env.REACT_APP_FEED_SERVICE_URL}/feed-s
 
 export default function Feed() {
     const [feed, setFeed] = useState();
-    console.log(feed)
     useEffect(() => {  
       const getFeed = async () => {
         axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');

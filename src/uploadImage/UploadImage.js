@@ -34,7 +34,6 @@ export default function UploadImage({ className }) {
     }
 
     function onChange(event) {
-        console.log(event.target.files[0])
         setImage(event.target.files[0])
         setImageURL(URL.createObjectURL(event.target.files[0]))
     }

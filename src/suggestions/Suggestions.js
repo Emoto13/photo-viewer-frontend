@@ -8,7 +8,6 @@ const GET_SUGGESTIONS_URL = `${process.env.REACT_APP_FOLLOW_SERVICE_URL}/follow-
  
 export default function Suggestions() {
     const [suggestions, setSuggestions] = useState([])
-    console.log(suggestions)
     useEffect(() => {
         axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
         const getSuggestions = async () => { await axios(GET_SUGGESTIONS_URL, )
